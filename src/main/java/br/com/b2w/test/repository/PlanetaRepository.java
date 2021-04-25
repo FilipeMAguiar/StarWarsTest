@@ -7,6 +7,4 @@ import java.util.List;
 
 public interface PlanetaRepository extends MongoRepository<Planeta, String> {
     List<Planeta> findAll();
-
-    Planeta findByName();
 }

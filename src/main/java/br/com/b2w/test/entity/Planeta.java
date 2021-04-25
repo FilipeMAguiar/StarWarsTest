@@ -21,5 +21,5 @@ public class Planeta {
 
     private String terreno;
 
-    private String aparicoes;
+    private int aparicoes;
 }
