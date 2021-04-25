@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "bc28addb-d41c-4381-8fcc-4a76140bcdde",
+		"name": "StarWars Teste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Adicionar Planeta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Coruscant\",\n    \"clima\": \"Temperado\",\n    \"terreno\": \"Urbano\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/planeta",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"planeta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Planetas ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/planeta",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"planeta"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "nome",
+							"value": "Coruscant",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remover Planeta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/planeta/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"planeta",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -62,6 +62,6 @@ public class PlanetaService {
 
     public String removerPlaneta(String id){
         this.repository.deleteById(id);
-        return "Planeta deletado com sucesso";
+        return "Planeta removido com sucesso";
     }
 }
